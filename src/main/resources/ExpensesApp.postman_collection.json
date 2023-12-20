@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "1d0012c3-1889-49d0-93f8-df570507e301",
+		"name": "ExpensesApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31906762"
+	},
+	"item": [
+		{
+			"name": "Expense",
+			"item": [
+				{
+					"name": "GET All Expenses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/expenses"
+					},
+					"response": []
+				},
+				{
+					"name": "GET a Expense by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/expenses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "POST a Expense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100.0,\r\n    \"description\": \"Lunch expense\",\r\n    \"date\": \"2023-12-16\",\r\n    \"expenseCategory\": {\r\n        \"name\": \"Food\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/expenses"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT a Expense",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 300.0,\r\n    \"description\": \"Travel expense\",\r\n    \"date\": \"2023-12-20\",\r\n    \"expenseCategory\": {\r\n        \"name\": \"Travel\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/expenses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE a Expense",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/expenses/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ExpenseCategory",
+			"item": [
+				{
+					"name": "GET All Category Expenses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/metadata/expense-categories"
+					},
+					"response": []
+				},
+				{
+					"name": "GET a Category Expense by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/metadata/expense-categories/1"
+					},
+					"response": []
+				},
+				{
+					"name": "POST a Category Expense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Food\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/metadata/expense-categories"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT a Category Expense",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Other\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/metadata/expense-categories/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE a Category Expense",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/metadata/expense-categories/2"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
